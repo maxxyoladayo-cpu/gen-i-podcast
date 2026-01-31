@@ -1,0 +1,47 @@
+:root {
+  /* Gen-I: Brand Colors */
+  --primary-yellow: #FFD700;
+  --primary-yellow-dim: #D4B300;
+
+  /* Light Mode Defaults */
+  --background: #FFFFFF;
+  --foreground: #111111;
+  --card-bg: #F4F4F4;
+  --border: #E0E0E0;
+  --text-secondary: #555555;
+}
+
+[data-theme='dark'] {
+  --background: #0E0E0E;
+  --foreground: #FFFFFF;
+  --card-bg: #1A1A1A;
+  --border: #333333;
+  --text-secondary: #BDBDBD;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}

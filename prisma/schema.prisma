@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Episode {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  audioUrl    String
+  coverImage  String
+  likes       Int       @default(0)
+  plays       Int       @default(0)
+  createdAt   DateTime  @default(now())
+  comments    Comment[]
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  content   String
+  author    String   @default("Anonymous")
+  isAdmin   Boolean  @default(false)
+  episode   Episode  @relation(fields: [episodeId], references: [id])
+  episodeId Int
+  createdAt DateTime @default(now())
+}
+
+model Subscriber {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}

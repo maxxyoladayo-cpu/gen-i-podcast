@@ -1,0 +1,136 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.yellow {
+    color: var(--primary-yellow);
+}
+
+.lead {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission {
+    background: var(--card-bg);
+    padding: 4rem;
+    border-radius: 32px;
+    border: 1px solid var(--border);
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 2rem;
+    color: var(--primary-yellow);
+    margin-bottom: 1.5rem;
+}
+
+.mission p {
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
+.spiritual {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.card {
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.card h3 {
+    color: var(--primary-yellow);
+    margin-bottom: 1rem;
+}
+
+.connect {
+    text-align: center;
+}
+
+.connect h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.platformGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.platformCard {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.platformCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-yellow);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-yellow);
+    transition: color 0.2s;
+}
+
+.platformCard:hover .icon {
+    color: var(--foreground);
+}
+
+.platformCard h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.platformCard span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+    }
+
+    .mission {
+        padding: 2rem;
+    }
+}
